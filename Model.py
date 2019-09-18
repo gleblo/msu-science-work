@@ -125,5 +125,5 @@ class Model():
 
 	def eval(self):
 
-		eval_results = mnist_classifier.evaluate(input_fn=self.eval_input_fn)
+		eval_results = self.mnist_classifier.evaluate(input_fn=self.eval_input_fn)
 		print(eval_results)
