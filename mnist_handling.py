@@ -1,11 +1,21 @@
-# import random
+import random
 import numpy as np
 # import cv2
 from skimage.transform import resize
 import tensorflow as tf
 
+
 def tf_complicater(arr):
 	return tf_noiser(tf_resizer(tf_shaper(arr)))
+
+
+
+def tf_shift(arr):
+	delta = random.uniform()
+	shift = tf.constant(value = delta, shape=tf.shape(arr))
+	ans = tf.scalar_mul(scalar = (1./(1+delta)), x = tf.add(arr,shift))
+	return ans	
+
 
 
 
