@@ -11,7 +11,7 @@ def tf_complicater(arr):
 
 
 def tf_shift(arr):
-	delta = random.uniform()
+	delta = random.uniform(0,1)
 	shift = tf.constant(value = delta, shape=tf.shape(arr))
 	ans = tf.scalar_mul(scalar = (1./(1+delta)), x = tf.add(arr,shift))
 	return ans	
