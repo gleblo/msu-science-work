@@ -6,7 +6,7 @@ import tensorflow as tf
 
 
 def tf_complicater(arr):
-	return tf_noiser(tf_resizer(tf_shaper(arr)))
+	return tf_noiser(tf_shift(tf_resizer(tf_shaper(arr))))
 
 
 
