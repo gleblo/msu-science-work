@@ -6,7 +6,7 @@ import tensorflow as tf
 
 
 def tf_complicater(arr):
-	return tf_noiser(tf_shift(tf_resizer(tf_shaper(arr))))
+	return tf_noiser(tf_resizer(tf_shaper(arr)))
 
 
 
@@ -74,8 +74,16 @@ def tf_placer(arr):
 
 
 def tf_noiser(arr):
-	bias = tf.random.normal(shape=tf.shape(arr),stddev=0.1)
+	delta = random.uniform(0, 2)
+	bias = tf.random.normal(shape=tf.shape(arr), mean = delta,stddev=0.1)
 	ans = tf.add(arr, bias)
+	tf_delta = tf.constant(value = [1./(1.+delta)], shape = ())
+	ans = tf.scalar_mul(scalar = tf_delta, x = ans)
+
+	delta2 = random.uniform(0.5, 1)
+	tf_delta2 = tf.constant(value = delta2, shape = ())
+	ans = tf.scalar_mul(scalar = tf_delta2, x = ans)
+
 	return ans
 
 
