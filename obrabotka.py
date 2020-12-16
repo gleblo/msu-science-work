@@ -12,7 +12,7 @@ def cut_long_tails(im, lbl):
 	for i in indcs:
 	    img = im[i].copy()
 
-	    img = cv2.resize(img, dsize=(128, 32), interpolation=cv2.INTER_CUBIC)
+	    # img = cv2.resize(img, dsize=(128, 32), interpolation=cv2.INTER_CUBIC)
 	    img = np.expand_dims(img , axis = 2)
 
 	    # Normalize each image
