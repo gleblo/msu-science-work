@@ -6,7 +6,7 @@
 
 def cut_long_tails(im, lbl):
 
-	images = []
+	# images = []
 	labels = []
 	indcs = [ i for i in range(len(im)) if len(im[i])<26  and len(im[i])>22 and len(im[i][0]) < 65 and len(im[i][0]) > 60 ]
 	for i in indcs:
