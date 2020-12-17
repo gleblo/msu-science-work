@@ -21,7 +21,7 @@ def remove_shit(im, lbl):
 
 	images = []
 	labels = []
-	for i in indcs:
+	for i in range(len(im)):
 		img = im[i].copy()
 		label = lbl[i]
 
