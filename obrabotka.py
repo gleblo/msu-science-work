@@ -12,8 +12,8 @@ def consists_of_shit(num):
         return False
 
 
-assert consists_of_shit(-0.1) == True
-assert (consists_of_shit(0.2) == False)
+# assert consists_of_shit(-0.1) == True
+# assert (consists_of_shit(0.2) == False)
 
 
 
