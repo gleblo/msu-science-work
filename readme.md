@@ -1,11 +1,11 @@
-# Быстрые предсказания
+# 1. Cells extraction
+Demonstration of the cell extraction method 
 
-Файл для предсказаний на конкретных ячейках и страницах, использующий обученную модель.
+# 2. Training
+Model architecture, training and validating
 
-# Обучение
+# 3. Predictions
+The notebook demonstrate plotting data from source and compare it with target image
 
-Файл генерирующий модель.
-
-# Уверенность
-
-Файл демонстрирующий работу уверенности
+# 4. Confidence
+Introduction of new confidence method
